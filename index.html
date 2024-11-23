@@ -104,16 +104,75 @@
 
     <footer>
         <section id="contato">
-            <h2>Contato</h2>
-            <p>Email: contato@paonachapa.com</p>
-            <p>Telefone: (11) 1234-5678</p>
-            <p>Endereço: Rua do Pão, 123 - Centro - São Paulo</p>
+            <h2>Fale Conosco</h2>
+            <p>Entre em contato conosco atraves do formulário abaixo!
+            </p>
+            <form id="form-contato">
+                <div class="grupo">
+                    <p>nome</p>
+                    <input 
+                    id="Nome"
+                    type="text"
+                    placeholder="Digite seu nome completo"
+                    required
+                    />
+                </div>
+                <div class="grupo">
+                    <p>email</p>
+                    <input 
+                    id="Email"
+                    type="email"
+                    placeholder="Digite seu email"
+                    required
+                    />
+                </div>
+                <div class="grupo">
+                    <p>telefone</p>
+                    <input 
+                    id="Telefone"
+                    type="tel"
+                    placeholder="Digite seu telefone"
+                    required
+                    />
+                </div>
+
+                <div class="grupo">
+                    <p>Mensagem</p>
+                    <textarea 
+                    id="Mensagem" 
+                    placeholder="Digite sua Mensagem"
+                    rows="5"
+                    cols="50"
+                    required></textarea>
+                </div>
+                <button type="submit">Enviar mensagem</button>
+
+                
+            </form>
         </section>
         <p class="direitos-autorais">&copy; 2024 - Padaria Pão na Chapa -
             Todos Direitos Reservados</p>
     </footer>
 
+<script>
+    const form = document.getElementById("form-contato")
+    form.addEventListener('submit', function (event){
 
+        event.preventDefault();
+
+        const nome = document.getElementById('Nome').value
+        const email = document.getElementById('Email').value
+        const telefone = document.getElementById('Telefone').value
+        const mensagem = document.getElementById('Mensagem').value
+
+        alert("dado do contato" + "\n" +
+            "Nome" + nome + "\n" +
+            "Email" + email + "\n" +
+            "Telefone" + telefone + "\n" +
+            "Mensagem" + mensagem
+        );
+    })
+</script>
 </body>
 
 </html>

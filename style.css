@@ -95,6 +95,64 @@ footer p {
     padding-bottom: 25px;
 }
 
+#form-contato{
+    width: 60%;
+    background-color: #fff;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+}
+
+.grupo {
+    font-weight: bold;
+    color: black;
+}
+
+.grupo input,
+.grupo textarea{
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.grupo input:focus,
+.grupo textarea:focus{
+    outline: none;
+    border-color: rgb(197, 137, 59);
+}
+
+#contato{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding: 20px;
+}
+
+#contato button{
+    width: 100%;
+    max-width: 400px;
+    padding: 15px;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: rgb(197, 137, 59);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3 ease;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#contato button:hover{
+    background-color: rgb(168,116,50);
+}
+
 @media (max-width: 875px) {
     #introducao {
         flex-direction: column;
